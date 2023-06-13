@@ -2,14 +2,14 @@
 <html>
   <head>
     <script>
-      function getTextValue() {
+      function updateButtonText() {
         var element = document.querySelector(
           'document.querySelector("#notion-app > div > div:nth-child(1) > div > div.notion-peek-renderer > div > div.notion-scroller.vertical > div.whenContentEditable > div:nth-child(3) > div > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(2) > div > div > div")'
         );
-        
+
         if (element) {
           var textValue = element.textContent;
-          console.log("Text Value:", textValue);
+          document.getElementById("btnTextValue").textContent = textValue;
           // Perform other operations with the text value if needed
         } else {
           console.log("Element not found.");
@@ -18,6 +18,6 @@
     </script>
   </head>
   <body>
-    <button onclick="getTextValue()">Get Text Value</button>
+    <button id="btnTextValue" onclick="updateButtonText()">Get Value</button>
   </body>
 </html>
